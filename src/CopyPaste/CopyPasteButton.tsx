@@ -34,6 +34,7 @@ function CopyPasteButton({
     <button
       onClick={handleClick}
       disabled={wasClicked}
+      data-testid="copy-paste-button"
     >
       <CopyPasteIcon />
     </button>

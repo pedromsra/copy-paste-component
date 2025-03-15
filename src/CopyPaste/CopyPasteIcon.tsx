@@ -1,7 +1,6 @@
-import { memo, CSSProperties } from "react";
+import { memo } from "react";
 
-function CopyPasteIcon({ color }: { color?: CSSProperties["color"] }) {
-  console.log(color);
+function CopyPasteIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +13,7 @@ function CopyPasteIcon({ color }: { color?: CSSProperties["color"] }) {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-copy"
+      data-testid="copy-paste-icon"
     >
       <path
         stroke="none"
