@@ -1,10 +1,8 @@
-import { CSSProperties, memo, useLayoutEffect, useState } from "react";
-import CopyPasteIcon from "./CopyPasteIcon";
+import { memo, useLayoutEffect, useState } from "react";
+import CopyIcon from "./CopyIcon";
 import "./styles.sass";
-
-function handleSetButtonColor(color: CSSProperties["color"] = "#000") {
-  document.documentElement.style.setProperty("--button-color", color);
-}
+import { ICopyToClipboard } from "./types";
+import { handleSetButtonColor } from "../lib";
 
 /**
  * Simple Copy Button with a simple color change when clicked,
@@ -16,15 +14,11 @@ function handleSetButtonColor(color: CSSProperties["color"] = "#000") {
  *
  */
 
-function CopyPasteButton({
+function CopyToClipboard({
   text,
   defaultColor = "inherit",
   copiedColor = "#00FF00",
-}: {
-  text: string;
-  defaultColor?: CSSProperties["color"];
-  copiedColor?: CSSProperties["color"];
-}) {
+}: ICopyToClipboard) {
   /**
    * @state wasClicked only register if the button was clicked or not
    */
@@ -49,15 +43,16 @@ function CopyPasteButton({
       handleSetButtonColor(defaultColor);
     }, 1000);
   }
+
   return (
     <button
       onClick={handleClick}
       disabled={wasClicked}
       data-testid="copy-paste-button"
     >
-      <CopyPasteIcon />
+      <CopyIcon />
     </button>
   );
 }
 
-export default memo(CopyPasteButton);
+export default memo(CopyToClipboard);

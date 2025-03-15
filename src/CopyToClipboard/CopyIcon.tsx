@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-function CopyPasteIcon() {
+function CopyIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,4 +26,4 @@ function CopyPasteIcon() {
   );
 }
 
-export default memo(CopyPasteIcon);
+export default memo(CopyIcon);

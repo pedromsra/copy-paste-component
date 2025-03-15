@@ -1,8 +1,9 @@
 import { render, screen, fireEvent, act } from "@testing-library/react";
-import CopyPasteButton from "./CopyPasteButton";
+import CopyToClipboard from "./CopyButton";
+import "@testing-library/jest-dom";
 
 // Mocking CopyPasteIcon as a simple div for testing purposes
-jest.mock("./CopyPasteIcon", () => () => <div data-testid="copy-paste-icon" />);
+jest.mock("./CopyIcon", () => () => <div data-testid="copy-paste-icon" />);
 
 beforeAll(() => {
     Object.assign(navigator, {
@@ -12,9 +13,9 @@ beforeAll(() => {
     });
   });
 
-describe("CopyPasteButton", () => {
+describe("CopyToClipboard", () => {
   it("renders the button with the correct icon", () => {
-    render(<CopyPasteButton text="Hello" />);
+    render(<CopyToClipboard text="Hello" />);
     
     // Check if button is rendered with the correct icon
     expect(screen.getByTestId("copy-paste-button")).toBeInTheDocument();
@@ -23,7 +24,7 @@ describe("CopyPasteButton", () => {
 
   it("sets the default button color", () => {
     const defaultColor = "#ff0000";
-    render(<CopyPasteButton text="Hello" defaultColor={defaultColor} />);
+    render(<CopyToClipboard text="Hello" defaultColor={defaultColor} />);
 
     // Check if the color property is set correctly
     expect(document.documentElement.style.getPropertyValue("--button-color")).toBe(defaultColor);
@@ -33,7 +34,7 @@ describe("CopyPasteButton", () => {
     const copiedColor = "#00FF00";
     const defaultColor = "#0000FF";
 
-    render(<CopyPasteButton text="Hello" defaultColor={defaultColor} copiedColor={copiedColor} />);
+    render(<CopyToClipboard text="Hello" defaultColor={defaultColor} copiedColor={copiedColor} />);
 
     // Initially, it should have the default color
     expect(document.documentElement.style.getPropertyValue("--button-color")).toBe(defaultColor);
@@ -55,7 +56,7 @@ describe("CopyPasteButton", () => {
   });
 
   it("disables the button after being clicked", async () => {
-    render(<CopyPasteButton text="Hello" />);
+    render(<CopyToClipboard text="Hello" />);
     
     const button = screen.getByTestId("copy-paste-button");
     
@@ -80,7 +81,7 @@ describe("CopyPasteButton", () => {
   it("copies text to the clipboard when clicked", async () => {
     const clipboardWriteSpy = jest.spyOn(navigator.clipboard, "writeText");
 
-    render(<CopyPasteButton text="Hello World" />);
+    render(<CopyToClipboard text="Hello World" />);
     
     // Simulate a click on the button
     fireEvent.click(screen.getByTestId("copy-paste-button"));

@@ -1,7 +1,7 @@
 {
-  "name": "copy-paste",
+  "name": "react-simple-copy-to-clipboard",
   "version": "1.0.0",
-  "description": "Simple CopyPaste React Based Component",
+  "description": "Simple CopyToClipboard React Based Component",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -54,7 +54,8 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "simple-react-copy-paste": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^19.0.0",

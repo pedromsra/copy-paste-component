@@ -1,1 +1,1 @@
-export { default as CopyPasteButton } from "./CopyPaste/CopyPasteButton";
+export { default as CopyToClipboard } from "./CopyToClipboard/CopyButton";
