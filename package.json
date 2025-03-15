@@ -2,8 +2,15 @@
   "name": "copy-paste",
   "version": "1.0.0",
   "description": "Simple CopyPaste React Based Component",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +32,18 @@
   "bugs": {
     "url": "https://github.com/pedromsra/copy-paste-component/issues"
   },
-  "homepage": "https://github.com/pedromsra/copy-paste-component#readme"
+  "homepage": "https://github.com/pedromsra/copy-paste-component#readme",
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "sass": "^1.85.1",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
 }
