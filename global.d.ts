@@ -1,4 +1,4 @@
-declare module "react-simple-copy-to-clipboard" {
+declare module "copy-to-clipboard-react-button" {
     import { FC, CSSProperties } from "react";
 
     export interface ICopyToClipboard {

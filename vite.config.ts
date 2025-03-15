@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "CopyPasteButton",
+      name: "CopyToClipboard",
       fileName: "index",
       formats: ["es", "cjs"],
     },
@@ -20,5 +20,6 @@ export default defineConfig({
         },
       },
     },
+    cssCodeSplit: false
   },
 });

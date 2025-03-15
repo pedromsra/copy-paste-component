@@ -1,12 +1,13 @@
 {
-  "name": "react-simple-copy-to-clipboard",
+  "name": "copy-to-clipboard-react-button",
   "version": "1.0.0",
-  "description": "Simple CopyToClipboard React Based Component",
+  "description": "Simple CopyToClipboard React Based Button Component",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src/CopyToClipboard/styles.sass"
   ],
   "scripts": {
     "build": "vite build",
@@ -54,8 +55,7 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "simple-react-copy-paste": "^1.0.0"
+    "react-dom": "^19.0.0"
   },
   "peerDependencies": {
     "react": "^19.0.0",
