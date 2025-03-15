@@ -1,0 +1,29 @@
+{
+  "name": "copy-paste",
+  "version": "1.0.0",
+  "description": "Simple CopyPaste React Based Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pedromsra/copy-paste-component.git"
+  },
+  "keywords": [
+    "component",
+    "copy-paste",
+    "copy",
+    "paste",
+    "react",
+    "react copypaste",
+    "copypaste",
+    "copy page component"
+  ],
+  "author": "Pedro de Araujo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedromsra/copy-paste-component/issues"
+  },
+  "homepage": "https://github.com/pedromsra/copy-paste-component#readme"
+}
